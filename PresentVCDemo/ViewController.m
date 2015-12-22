@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "PresentVC.h"
 
 @interface ViewController ()
 
@@ -19,9 +20,9 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    PresentVC * presentView = [[PresentVC alloc]init];
+    [self presentViewController:presentView animated:YES completion:nil];
 }
 
 @end

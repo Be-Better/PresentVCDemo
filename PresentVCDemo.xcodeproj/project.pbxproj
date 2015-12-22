@@ -14,6 +14,9 @@
 		7485B7511C297CC1009DF4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7485B7501C297CC1009DF4A1 /* Assets.xcassets */; };
 		7485B7541C297CC1009DF4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7485B7521C297CC1009DF4A1 /* LaunchScreen.storyboard */; };
 		7485B75C1C297CEA009DF4A1 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7485B75B1C297CEA009DF4A1 /* 1.jpg */; };
+		7485B75F1C297D6E009DF4A1 /* PresentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7485B75E1C297D6E009DF4A1 /* PresentVC.m */; };
+		7485B7631C297E93009DF4A1 /* CCLModalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 7485B7621C297E93009DF4A1 /* CCLModalTransition.m */; };
+		7485B7661C298847009DF4A1 /* UIView+anchorPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 7485B7651C298847009DF4A1 /* UIView+anchorPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		7485B7531C297CC1009DF4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7485B7551C297CC1009DF4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7485B75B1C297CEA009DF4A1 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		7485B75D1C297D6E009DF4A1 /* PresentVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentVC.h; sourceTree = "<group>"; };
+		7485B75E1C297D6E009DF4A1 /* PresentVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentVC.m; sourceTree = "<group>"; };
+		7485B7611C297E93009DF4A1 /* CCLModalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLModalTransition.h; sourceTree = "<group>"; };
+		7485B7621C297E93009DF4A1 /* CCLModalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLModalTransition.m; sourceTree = "<group>"; };
+		7485B7641C298847009DF4A1 /* UIView+anchorPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+anchorPoint.h"; sourceTree = "<group>"; };
+		7485B7651C298847009DF4A1 /* UIView+anchorPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+anchorPoint.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +70,13 @@
 		7485B7431C297CC1009DF4A1 /* PresentVCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7485B7601C297E6E009DF4A1 /* Utils */,
 				7485B7471C297CC1009DF4A1 /* AppDelegate.h */,
 				7485B7481C297CC1009DF4A1 /* AppDelegate.m */,
 				7485B74A1C297CC1009DF4A1 /* ViewController.h */,
 				7485B74B1C297CC1009DF4A1 /* ViewController.m */,
-				7485B74D1C297CC1009DF4A1 /* Main.storyboard */,
-				7485B7501C297CC1009DF4A1 /* Assets.xcassets */,
-				7485B7521C297CC1009DF4A1 /* LaunchScreen.storyboard */,
-				7485B7551C297CC1009DF4A1 /* Info.plist */,
+				7485B75D1C297D6E009DF4A1 /* PresentVC.h */,
+				7485B75E1C297D6E009DF4A1 /* PresentVC.m */,
 				7485B7441C297CC1009DF4A1 /* Supporting Files */,
 			);
 			path = PresentVCDemo;
@@ -77,9 +85,24 @@
 		7485B7441C297CC1009DF4A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7485B74D1C297CC1009DF4A1 /* Main.storyboard */,
+				7485B7501C297CC1009DF4A1 /* Assets.xcassets */,
+				7485B7521C297CC1009DF4A1 /* LaunchScreen.storyboard */,
+				7485B7551C297CC1009DF4A1 /* Info.plist */,
 				7485B7451C297CC1009DF4A1 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7485B7601C297E6E009DF4A1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7485B7611C297E93009DF4A1 /* CCLModalTransition.h */,
+				7485B7621C297E93009DF4A1 /* CCLModalTransition.m */,
+				7485B7641C298847009DF4A1 /* UIView+anchorPoint.h */,
+				7485B7651C298847009DF4A1 /* UIView+anchorPoint.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,8 +176,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7485B75F1C297D6E009DF4A1 /* PresentVC.m in Sources */,
+				7485B7631C297E93009DF4A1 /* CCLModalTransition.m in Sources */,
 				7485B74C1C297CC1009DF4A1 /* ViewController.m in Sources */,
 				7485B7491C297CC1009DF4A1 /* AppDelegate.m in Sources */,
+				7485B7661C298847009DF4A1 /* UIView+anchorPoint.m in Sources */,
 				7485B7461C297CC1009DF4A1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
